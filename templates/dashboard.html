@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ url_for('static', filename='dashboard.css')}}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <svg class="logo_img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z"/>
+                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                  </svg>
+                MyPortfolio
+            </div>
+            <ul class="nav_selection">
+                <li class="nav_button">home</li>
+                <li class="nav_button">about</li>
+                <li class="nav_button">portfolio</li>
+                <li class="nav_button">product</li>
+                <li class="nav_button">cert.</li>
+                <li class="nav_button">contact</li>
+            </ul>
+            <div class="login_button">
+                template
+            </div>
+        </header>
+
+        {% if page == 1 %}
+        <article>
+            <h2>Profile Template</h2>
+            <hr>
+            
+            <div class="grid_profile_template">
+                {% for card in template_cards %}
+                <div class="template_card" onclick="location.href='/myprofile'">
+                    <h4 class="template_name">{{ card }}</h4>
+                    <hr>
+                    <img class="template_img" src="{{ url_for('static', filename='template_1.png') }}" alt="">
+                    <p class="template_detail">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius aspernatur dicta iure incidunt, placeat tempora laboriosam. Non deserunt aspernatur rerum minima quidem alias iure eos, provident cumque quia delectus dolore.</p>
+                </div>
+                {% endfor %}
+            </div>
+        </article>
+       {% elif page == 2 %}
+       <article>
+        <h2>Profile Detail Form</h2>
+        <hr>
+        <form class="profile_form" method="post">
+
+                <div class="label">
+                    <p>name</p>
+                </div>
+
+            <div>
+                {{ form.name(class='input_box') }}
+            </div>
+            <!--  -->
+
+                <div class="label">
+                    <p>age</p>
+                </div>
+
+            <div>
+                {{ form.age(class='input_box') }}
+            </div>
+            <!--  -->
+
+                <div class="label">
+                    <p>experience</p>
+                </div>
+
+            <div>
+                {{ form.experience(class='input_box') }}
+            </div>
+            <!--  -->
+
+                <div class="label">
+                    <p>phone</p>
+                </div>
+
+            <div>
+                {{ form.phone(class='input_box') }}
+            </div>
+            <!--  -->
+
+                <div class="label">
+                    <p>fax</p>
+                </div>
+
+            <div>
+                {{ form.fax(class='input_box') }}
+            </div>
+            <!--  -->
+
+                <div class="label">
+                    <p>email</p>
+                </div>
+
+            <div>
+                {{ form.email(class='input_box') }}
+            </div>
+            <!--  -->
+            
+                <div class="label">
+                    <p>website</p>
+                </div>
+            
+            <div>
+                {{ form.website(class='input_box') }}
+            </div>
+            <!--  -->
+            <div class="label">
+                <p>degree</p>
+            </div>
+            <div>
+                {{ form.degree(class='input_box') }}
+            </div>
+            <!--  -->
+
+                <div class="label">
+                    <p>careerlevel</p>
+                </div>
+
+            <div>
+                {{ form.careerlevel(class='input_box') }}
+            </div>
+            <!--  -->
+            <br>
+            <div class="submit_container" >
+                {{ form.submit(class='profile_submit') }}
+            </div>
+        </form>
+       </article>
+       {% endif %}
+    </body>
+</html>
