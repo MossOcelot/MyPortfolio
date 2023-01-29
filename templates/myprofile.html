@@ -73,7 +73,7 @@
         <div class="resume_bar">
             <div class="rb_left">
                 <h1>RESUME</h1>
-                <div class="resume_button">
+                <div class="resume_button" onclick="location.href='{{ url_for('accounts.update', folio_id=folio.id) }}'">
                     EDIT RESUME
                 </div>
             </div>
@@ -93,11 +93,11 @@
                 <div class="box_detail">
                     <div class="line_detail">
                         <h3 class="d_title">Name</h3>
-                        <h3 class="d_line">{{name}}</h3>
+                        <h3 class="d_line">{{ folio.name }}</h3>
                     </div>
                     <div class="line_detail">
                         <h3 class="d_title">AGE</h3>
-                        <h3 class="d_line">19 year</h3>
+                        <h3 class="d_line">{{ folio.age }}</h3>
                     </div>
                     <div class="line_detail">
                         <h3 class="d_title">LOCATION</h3>
@@ -105,11 +105,11 @@
                     </div>
                     <div class="line_detail">
                         <h3 class="d_title">EXPERIENCE</h3>
-                        <h3 class="d_line">100 Years</h3>
+                        <h3 class="d_line">{{ folio.experience }}</h3>
                     </div>
                     <div class="line_detail">
                         <h3 class="d_title">DEGREE</h3>
-                        <h3 class="d_line">Bachelor of Engineering</h3>
+                        <h3 class="d_line">{{ folio.degree }}</h3>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                     <div class="left_box">
                         <div class="line_detail">
                             <h3 class="d_title">Name</h3>
-                            <h3 class="d_line">Phumin Sathipchan</h3>
+                            <h3 class="d_line">{{ folio.name }}</h3>
                         </div>
                         <div class="line_detail">
                             <h3 class="d_title">LOCATION</h3>
@@ -129,38 +129,38 @@
                         </div>
                         <div class="line_detail">
                             <h3 class="d_title">DEGREE</h3>
-                            <h3 class="d_line">Bachelor of Engineering</h3>
+                            <h3 class="d_line">{{ folio.degree }}</h3>
                         </div>
                         <div class="line_detail">
                             <h3 class="d_title">PHONE</h3>
-                            <h3 class="d_line">0950841663</h3>
+                            <h3 class="d_line">{{ folio.phone }}</h3>
                         </div>
                         <div class="line_detail">
                             <h3 class="d_title">E-MAIL</h3>
-                            <h3 class="d_line">phuminsathipchan@gmail.com</h3>
+                            <h3 class="d_line">{{ folio.email }}</h3>
                         </div>
                     </div>
 
                     <div class="right_box">
                         <div class="line_detail">
                             <h3 class="d_title">AGE</h3>
-                            <h3 class="d_line">190 Years</h3>
+                            <h3 class="d_line">{{ folio.age }}</h3>
                         </div>
                         <div class="line_detail">
                             <h3 class="d_title">EXPERIENCE</h3>
-                            <h3 class="d_line">100 Years</h3>
+                            <h3 class="d_line">{{ folio.experience }}</h3>
                         </div>
                         <div class="line_detail">
                             <h3 class="d_title">CAREER LEVEL</h3>
-                            <h3 class="d_line">Senior Engineer</h3>
+                            <h3 class="d_line">{{ folio.careerlevel }}</h3>
                         </div>
                         <div class="line_detail">
                             <h3 class="d_title">FAX</h3>
-                            <h3 class="d_line">0950841664</h3>
+                            <h3 class="d_line">{{ folio.fax }}</h3>
                         </div>
                         <div class="line_detail">
                             <h3 class="d_title">WEBSITE</h3>
-                            <h3 class="d_line">example.com</h3>
+                            <h3 class="d_line">{{ folio.website }}</h3>
                         </div>
                     </div>
                 </div>

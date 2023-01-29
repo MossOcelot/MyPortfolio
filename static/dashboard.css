@@ -20,6 +20,8 @@ header {
     font-size: 24px;
     font-weight: 600;
     color: #4267B2;
+
+    cursor: pointer;
 }
 
 .logo_img {
@@ -156,4 +158,25 @@ article {
 .submit_container {
     display: flex;
     justify-content: right;
+}
+
+.title_card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button_delete {
+    width: 60px;
+    height: 30px;
+
+    background-color: red;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
 }
